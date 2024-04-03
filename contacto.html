@@ -18,9 +18,10 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> <!--BARRA NAV-->
       <div class="container">
         <a href="#" class="navbar-brand"
+          
           ><span class="text-warning">Rayo</span
           ><span class="text-danger">McQueen</span></a
         >
@@ -39,44 +40,49 @@
         <div class="collapse navbar-collapse" id="navbar-start">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nuestros trabajos</a>
+              <a class="nav-link" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="#">Trabajos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="equipo.html">Equipo</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container contacto">
+    <br><br><br>
 
-      <form class="was-validated">
+    <div class="container">
 
-      <div class="row mb-3">
-
-
-        <div class="col-md-6">
-          <label for="validationCustom01" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="validationCustom01" value="" required>
-        </div>
-        <div class="col-md-6">
-          <label for="validationCustom02" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="validationCustom02" value="" required>
-        </div>
+      <div class="col-md-12">
+      <center><h1>Rellena el formulario</h1></center>
       </div>
 
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-      </div>
-        
+      <form class="was-validated" method="post" action="contacto.php">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="validationCustom02" value="" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@dominio.com" required>
+        </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Tipo de consulta</label>
           <select class="form-select" required aria-label="select example">
@@ -84,22 +90,15 @@
             <option value="1">Reparación</option>
             <option value="2">Mantención</option>
           </select>
-          <div class="invalid-feedback">Selecciona un tipo de consulta</div>
         </div>
-    
         <div class="mb-3">
           <label for="validationTextarea" class="form-label">Detalles</label>
           <textarea class="form-control" id="validationTextarea" placeholder="Escribe todos los detalles de tu consulta" required></textarea>
-          <div class="invalid-feedback">
-            Por favor ingresa un mensaje.
-          </div>
         </div>
-      
         <div class="mb-3">
-          <button class="btn btn-primary" type="submit" disabled>Enviar</button>
+          <button class="btn btn-primary" type="submit">Enviar</button>
         </div>
       </form>
-
     </div>
 
 
