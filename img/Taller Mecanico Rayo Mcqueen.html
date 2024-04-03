@@ -95,9 +95,9 @@
       <div class="carousel-inner">
         <div class="carousel-item active"> <!--Imagen 1-->
           <img src="img/mantencion.jpg" class="d-block w-100" alt="error" style="height: 800px;" />
-          <div class="carousel-caption"><!--Texto Imagen 1-->
-            <h1>Trabajo de Mantención</h1>
-            <p>
+          <div class="carousel-caption">
+            <h1 class="custom-heading">Trabajo de Mantención</h1>
+            <p class="custom-heading">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
               dicta!
             </p>
@@ -106,9 +106,9 @@
         </div>
         <div class="carousel-item"> <!--Imagen 2-->
           <img src="img/reparacion.jpeg" class="d-block w-100" alt="error" style="height: 800px;" />
-          <div class="carousel-caption"><!--Texto Imagen 2-->
-            <h1>Trabajo de Reparación</h1>
-            <p>
+          <div class="carousel-caption">
+            <h1 class="custom-heading">Trabajo de Reparación</h1>
+            <p class="textcarrusel">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Repellat, optio?
             </p>
@@ -122,7 +122,7 @@
             alt="error"
             style="height: 800px;"
           />
-          <div class="carousel-caption"><!--Texto Imagen 3-->
+          <div class="carousel-caption">
             <h1>Trabajo realizado</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dolor.
@@ -233,5 +233,43 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-  </body>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
 </html>
