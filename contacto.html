@@ -18,9 +18,10 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> <!--BARRA NAV-->
       <div class="container">
         <a href="#" class="navbar-brand"
+          
           ><span class="text-warning">Rayo</span
           ><span class="text-danger">McQueen</span></a
         >
@@ -39,24 +40,35 @@
         <div class="collapse navbar-collapse" id="navbar-start">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nuestros trabajos</a>
+              <a class="nav-link" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="#">Trabajos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="equipo.html">Equipo</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container contacto">
-      <form class="was-validated">
+    <br><br><br>
+
+    <div class="container">
+
+      <div class="col-md-12">
+      <center><h1>Rellena el formulario</h1></center>
+      </div>
+
+      <form class="was-validated" method="post" action="contacto.php">
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="validationCustom01" class="form-label">Nombre</label>
