@@ -20,33 +20,22 @@
 
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top"> <!--BARRA NAV-->
+    <nav class="navbar navbar-expand-lg bg-body-dark">
       <div class="container">
-        <a href="#" class="navbar-brand"
-          
-          ></a><span>  <img src="img/rollsroyce.png" alt="error" style="height: 50px;"></span
-          ><span class="text-light" style="font-size: 10mm;">Rayo</span
-          ><span class="text-secondary" style="font-size: 10mm;">McQueen</span></a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar-start"
-          aria-controls="navbar-start"
-          aria-expanded="false"
-          aria-label="Toggle-navigation"
-        >
+        <a class="navbar-brand" href="#"><img src="img/rollsroyce.png" alt="error" width="30" height="40">
+        <span class="text-light" style="font-size: 10mm;">Rayo</span><span class="text-secondary" style="font-size: 10mm;">McQueen</span></a>
+        <button class="navbar-toggler" style="border: none;" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbar-start">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html" style="color: aliceblue;">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="#" style="color:aliceblue;">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: aliceblue;">Servicios</a>
+              <button class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: aliceblue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Servicios</button>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" style="color: aliceblue;">Trabajos</a>
@@ -64,6 +53,27 @@
         </div>
       </div>
     </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <span class="text-dark"><h3>Servicios</h3></span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <a class="nav-link" href="#"><p style="font-size: 5mm; color: black;">Mantenimiento</p></a>
+            <br> <br>
+            <a class="nav-link" href="#"><p style="font-size: 5mm; color: black;">Reparaciones</p></a>
+            <br> <br>
+            <a class="nav-link" href="#"><p style="font-size: 5mm; color: black;">Refacciones</p></a>
+            <br> <br>
+            <a class="nav-link" href="#"><p style="font-size: 5mm; color: black;">Tuneado</p></a>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
         <!--CARRUSEL DE IMAGEN-->
     <div
       id="carouselExampleCaptions"
@@ -96,7 +106,7 @@
         <div class="carousel-item active"> <!--Imagen 1-->
           <img src="img/mantencion.jpg" class="d-block w-100" alt="error" style="height: 800px;" />
           <div class="carousel-caption"><!--Texto Imagen 1-->
-            <h1>Trabajo de Mantención</h1>
+            <h1 style="-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: black;">Trabajo de Mantención</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
               dicta!
@@ -107,7 +117,7 @@
         <div class="carousel-item"> <!--Imagen 2-->
           <img src="img/reparacion.jpeg" class="d-block w-100" alt="error" style="height: 800px;" />
           <div class="carousel-caption"><!--Texto Imagen 2-->
-            <h1>Trabajo de Reparación</h1>
+            <h1 style="-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: black;">Trabajo de Reparación</h1>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Repellat, optio?
@@ -123,7 +133,7 @@
             style="height: 800px;"
           />
           <div class="carousel-caption"><!--Texto Imagen 3-->
-            <h1>Trabajo realizado</h1>
+            <h1 style="-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: black;">Trabajo realizado</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dolor.
             </p>
