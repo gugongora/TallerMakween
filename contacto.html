@@ -19,7 +19,7 @@
 
 
 
-  <body>
+  <body style="background-color: white;">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top"> <!--BARRA NAV-->
       <div class="container">
         <a href="#" class="navbar-brand"
@@ -67,43 +67,59 @@
 
     <br><br><br>
 
-    <div class="container">
 
-      <div class="col-md-12">
-      <center><h1>Rellena el formulario</h1></center>
-      </div>
 
-      <form class="was-validated" method="post" action="contacto.php">
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <label for="validationCustom01" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="validationCustom01" value="" required>
-          </div>
-          <div class="col-md-6">
-            <label for="validationCustom02" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="validationCustom02" value="" required>
-          </div>
+    <div class="container d-flex justify-content-center text-center" >
+
+      <div class="col-md-8">
+      <h1 style="padding-top: 5%; padding-bottom: 5%;">Rellena el formulario</h1>
+      
+
+      <form class="was-validated">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="validationCustom01" placeholder=" " required>
+                <label for="validationCustom01" class="form-label">Nombre</label>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@dominio.com" required>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="validationCustom02" placeholder=" " required>
+                <label for="validationCustom02" class="form-label">Apellido</label>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Tipo de consulta</label>
-          <select class="form-select" required aria-label="select example">
-            <option value="">Seleccionar</option>
-            <option value="1">Reparación</option>
-            <option value="2">Mantención</option>
-          </select>
+    </div>
+    <div class="mb-3">
+        <div class="form-floating">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" " required>
+            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
         </div>
-        <div class="mb-3">
-          <label for="validationTextarea" class="form-label">Detalles</label>
-          <textarea class="form-control" id="validationTextarea" placeholder="Escribe todos los detalles de tu consulta" required></textarea>
+    </div>
+    <div class="mb-3">
+        <div class="form-floating">
+            <select class="form-select" required aria-label="select example">
+                <option value="">Seleccionar</option>
+                <option value="1">Reparación</option>
+                <option value="2">Mantención</option>
+            </select>
+            <label for="validationCustom03" class="form-label">Tipo de consulta</label>
         </div>
-        <div class="mb-3">
-          <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+    <div class="mb-3">
+        <div class="form-floating">
+            <textarea style="min-height: 100px;" class="form-control" id="validationTextarea" placeholder=" " required></textarea>
+            <label for="validationTextarea" class="form-label">Detalles</label>
         </div>
-      </form>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+</form>
+
+
+    </div>
+
     </div>
 
 
