@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taller Mecanico Rayo Mcqueen</title>
-    <link rel="shortcut icon" href="img/sport-car.ico"> <!--ICONO PAGINA-->
+    <!--BOOTSTRAP-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
-    />
+    /><!--CSS-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -18,52 +18,125 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-
-
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> <!--BARRA NAV-->
+    <!----NAVBAR---->
+    <nav class="navbar navbar-expand-lg" style="background-color: black"> 
       <div class="container">
-        <a href="#" class="navbar-brand"
-          
-          ><span class="text-warning">Rayo</span
-          ><span class="text-danger">McQueen</span></a
+        <a class="navbar-brand"
+          ><img src="img/rollsroyce.png" alt="error" width="30" height="40" />
+          <span class="text-light" style="font-size: 10mm">Rayo</span
+          ><span class="text-secondary" style="font-size: 10mm"
+            >McQueen</span
+          ></a
         >
         <button
           class="navbar-toggler"
+          style="border: none"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbar-start"
-          aria-controls="navbar-start"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle-navigation"
+          aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon navbar-dark"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbar-start">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="index.html"
+                style="color: aliceblue"
+                >Inicio</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Nuestros trabajos</a>
+              <button
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                style="
+                  color: aliceblue;
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                    'Trebuchet MS', sans-serif;
+                "
+              >
+                Servicios
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
+              <a class="nav-link" href="trabajos.html" style="color: aliceblue">Trabajos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="equipo.html" style="color: aliceblue"
+                >Equipo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html" style="color: aliceblue"
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a type="button" class="btn btn-light" href="ingreso.html"
+                >CREAR UNA CUENTA/INGRESA</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
+    <!--MODAL-->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none">
+            <span class="text-dark"><h3>Servicios</h3></span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <a class="nav-link" href="#"
+              ><p style="font-size: 5mm; color: black">Mantenimiento</p></a
+            >
+            <br />
+            <br />
+            <a class="nav-link" href="#"
+              ><p style="font-size: 5mm; color: black">Reparaciones</p></a
+            >
+            <br />
+            <br />
+            <a class="nav-link" href="#"
+              ><p style="font-size: 5mm; color: black">Refacciones</p></a
+            >
+            <br />
+            <br />
+            <a class="nav-link" href="#"
+              ><p style="font-size: 5mm; color: black">Tuneado</p></a
+            >
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--CARRUSEL DE IMAGEN-->
     <div
       id="carouselExampleCaptions"
       class="carousel slide"
       data-bs-ride="carousel"
-    >       <!--CARRUSEL DE IMAGEN-->
+    >
       <div class="carousel-indicators">
         <button
           type="button"
@@ -88,39 +161,83 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/mantencion.jpg" class="d-block w-100" alt="..." />
+          <!--Imagen 1-->
+          <img
+            src="img/car10.jpg"
+            class="d-block w-100"
+            alt="error"
+            style="height: auto"
+          />
           <div class="carousel-caption">
-            <h5>Trabajo de Mantención</h5>
+            <!--Texto Imagen 1-->
+            <h1
+              style="
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              Trabajo de Mantención
+            </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
               dicta!
             </p>
-            <button type="button" class="btn btn-danger">Ver más</button>
+            <button type="button" class="btn bg-light text-black">
+              Ver más
+            </button>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/reparacion.jpeg" class="d-block w-100" alt="..." />
+          <!--Imagen 2-->
+          <img
+            src="img/car20.jpg"
+            class="d-block w-100"
+            alt="error"
+            style="height: auto"
+          />
           <div class="carousel-caption">
-            <h5>Trabajo de Reparación</h5>
-            <p class="textcarrusel">
+            <!--Texto Imagen 2-->
+            <h1
+              style="
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              Trabajo de Reparación
+            </h1>
+            <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Repellat, optio?
             </p>
-            <button type="button" class="btn btn-danger">Ver más</button>
+            <button type="button" class="btn bg-light text-black">
+              Ver más
+            </button>
           </div>
         </div>
         <div class="carousel-item">
+          <!--Imagen 3-->
           <img
-            src="img/desafío-qué-auto-era-es-v0-gx3eooh4hxj91.webp"
+            src="img/car30.jpg"
             class="d-block w-100"
-            alt="..."
+            alt="error"
+            style="height: auto"
           />
           <div class="carousel-caption">
-            <h5>Trabajo realizado</h5>
+            <!--Texto Imagen 3-->
+            <h1
+              style="
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              Trabajo realizado
+            </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dolor.
             </p>
-            <button type="button" class="btn btn-danger">Ver más</button>
+            <button type="button" class="btn bg-light text-black">
+              Ver más
+            </button>
           </div>
         </div>
       </div>
@@ -144,136 +261,174 @@
       </button>
     </div>
     <!--FIN DEL CARRUSEL-->
-    <br>
-    <br>
-
-    <section class="services">
-      <div class="container">
-        <div class="row">
-            <div class="card mb-3">
-                <img src="img/c1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Servicio 1</h5>
-                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, quia?</p>
-                  <button class="btn bg-danger text-white">Leer mas</button>
+    <br />
+    <br />
+    
+    
+    <!--BARRA DE BUSQUEDA-->
+    <div class="container">
+      <div class="col-md-8 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <div class="form-check form-check-inline">Buscar por:</div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineRadio1"
+                    >Nombre Mecánico</label
+                  >
                 </div>
-                <div class="card mb-3">
-                    <img src="img/c2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Servicio 2</h5>
-                      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, quia?</p>
-                      <button class="btn bg-danger text-white">Leer mas</button>
-                    </div>
-                    <div class="card mb-3">
-                        <img src="img/c3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Servicio 3</h5>
-                          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, quia?</p>
-                          <button class="btn bg-danger text-white">Leer mas</button>
-                        </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                  />
+                  <label class="form-check-label" for="inlineRadio2"
+                    >Categoría</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio3"
+                    value="option3"
+                  />
+                  <label class="form-check-label" for="inlineRadio3"
+                    >Palabra Clave</label
+                  >
+                </div>
+              </div>
+
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Buscar"
+                  aria-label="Buscar"
+                />
+                <button class="btn btn-outline-dark" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="section.icons">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-12 col-md-12 col-lg-4 box-icons">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-minecart"></i>
-                        <div class="ms-4">
-                            <h3>Garantia de 3 meses</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, accusamus.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-12 col-lg-4 box-icons">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-cash-coin"></i>
-                        <div class="ms-4">
-                            <h3>Reembolso en caso de fallas</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, accusamus.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-12 col-lg-4 box-icons">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-megaphone"></i>
-                        <div class="ms-4">
-                            <h3>Transparencia</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, accusamus.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <br /><br />
+      <!---TARJETAS-->
+      <div class="row">
+        <div class="card bg-dark mb-3">
+          <br>
+          <img src="img/c1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title" style="color: aliceblue">Servicio 1</h5>
+            <p class="card-text" style="color: aliceblue">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima,
+              quia?
+            </p>
+            <button class="btn bg-light text-black">Leer mas</button>
+          </div>
         </div>
-
-    </section>
-
-    <br>
-
-    <section class="mecanico">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header text-center pb-5">
-                        <h2>Mecánicos</h2>
-                        <p>Conoce a esta manga de saco weas que trabajan acá</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                  <div class="card">
-                    <img src="img/tiorene.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Tío René</h5>
-                      <p class="card-text">El gran Cell, cabeza de yunque de 700 toneladas, deos de pichula.</p>
-                      <a href="#" class="btn btn-danger">Saber más</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/papimicki.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Caga almuerzos</h5>
-                      <p class="card-text">Que trabaje y haga alguna wea el pastero conchetumare.</p>
-                      <a href="#" class="btn btn-danger">Saber más</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/vendedor de leña.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Dodoria</h5>
-                      <p class="card-text">Hace los medios silvidos cuando te arregla la caga de auto</p>
-                      <a href="#" class="btn btn-danger">Saber más</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/huevito rey.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Egg King</h5>
-                      <p class="card-text">Después de que se lo culiaron en cana, busca pega.</p>
-                      <a href="#" class="btn btn-danger">Saber más</a>
-                    </div>
-                  </div>
-                </div>
+        <div class="card bg-dark mb-3">
+          <br>
+          <img src="img/c2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title" style="color: aliceblue">Servicio 2</h5>
+            <p class="card-text" style="color: aliceblue">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima,
+              quia?
+            </p>
+            <button class="btn bg-light text-black">Leer mas</button>
+          </div>
+        </div>
+        <div class="card bg-dark mb-3">
+          <br>
+          <img src="img/c3.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title" style="color: aliceblue">Servicio 3</h5>
+            <p class="card-text" style="color: aliceblue">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima,
+              quia?
+            </p>
+            <button class="btn bg-light text-black">Leer mas</button>
+          </div>
+        </div>
+      </div>
+      <!--ANTES DEL FOOTER -->
+      <div class="container" style="color: black">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4 box-icons">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-minecart fs-1"></i>
+              <div class="ms-4">
+                <h3>Garantia de 3 meses</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Reiciendis, accusamus.
+                </p>
               </div>
-    </section>
+            </div>
+          </div>
 
+          <div class="col-12 col-md-12 col-lg-4 box-icons">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-cash-coin fs-1"></i>
+              <div class="ms-4">
+                <h3>Reembolso en caso de fallas</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Reiciendis, accusamus.
+                </p>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-12 col-md-12 col-lg-4 box-icons">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-megaphone fs-1"></i>
+              <div class="ms-4">
+                <h3>Transparencia</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Reiciendis, accusamus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Contacto</h3>
+            <p>Correo electrónico: info@example.com</p>
+            <p>Teléfono: 123-456-7890</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Redes Sociales</h3>
+            <p>Facebook</p>
+            <p>Instragram</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--SCRIPT JS-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
