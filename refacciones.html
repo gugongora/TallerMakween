@@ -93,22 +93,27 @@
       </div>
     </section>
 
-    <section class="info-container-ref">
-      <div class="info-img-ref">
-        <img src="img/refacciones-mid.jpg" alt="refacciones" />
+    <div class="container container-servicios">
+      <div class="card mb-3" style="border: none;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/refacciones-mid.jpg" class="img-fluid rounded" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h1 class="card-title">La refacción adecuada para cada problema</h1>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                asperiores exercitationem ducimus rerum. Quibusdam sunt, repudiandae
+                autem debitis, et amet cupiditate, similique iure saepe molestias
+                fugit. Quaerat sit nostrum, ipsa ipsum quibusdam ipsam voluptas ut
+                libero dolor, sed, suscipit aliquam porro vitae soluta omnis
+                consequatur. Dolore aliquid doloribus asperiores earum?
+              </p>        
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="info-txt">
-        <h2>La refacción adecuada para cada problema</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-          asperiores exercitationem ducimus rerum. Quibusdam sunt, repudiandae
-          autem debitis, et amet cupiditate, similique iure saepe molestias
-          fugit. Quaerat sit nostrum, ipsa ipsum quibusdam ipsam voluptas ut
-          libero dolor, sed, suscipit aliquam porro vitae soluta omnis
-          consequatur. Dolore aliquid doloribus asperiores earum?
-        </p>
-      </div>
-    </section>
 
     <div class="titulo-inferior">
         <h2>Refacciones</h2>
@@ -221,6 +226,7 @@
         </div>
       </div>
     </div>
+    </div>
 
     <footer class="footer">
       <div class="container-fluid">
@@ -244,5 +250,19 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
   </body>
 </html>

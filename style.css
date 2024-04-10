@@ -183,8 +183,16 @@ body {
     margin-right: 30px;
 }
 
+.titulo-inferior-1{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
 .titulo-inferior{
     margin-left: 80px;
+    padding-top: 6%;
+    text-align: center;
 }
 
 .titulo-inferior h2{
@@ -215,6 +223,10 @@ body {
     float: left;
 }
 
+
+.container-servicios{
+    padding-top: 7%; padding-bottom: 2%
+}
 
 
 .home-mantenimiento{

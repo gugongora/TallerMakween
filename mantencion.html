@@ -135,17 +135,23 @@
     </section>
 
     
-    <div class="container" style="padding-top: 2%; padding-bottom: 2%">
+    <div class="container container-servicios">
       <div class="card mb-3" style="border: none;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="img/revision-taller.jpg" class="img-fluid rounded-start" alt="...">
+            <img src="img/revision-taller.jpg" class="img-fluid rounded" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h1 class="card-title">Comprobaciones periódicas en nuestro taller</h1>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                asperiores exercitationem ducimus rerum. Quibusdam sunt, repudiandae
+                autem debitis, et amet cupiditate, similique iure saepe molestias
+                fugit. Quaerat sit nostrum, ipsa ipsum quibusdam ipsam voluptas ut
+                libero dolor, sed, suscipit aliquam porro vitae soluta omnis
+                consequatur. Dolore aliquid doloribus asperiores earum?
+              </p>
             </div>
           </div>
         </div>
@@ -173,6 +179,8 @@
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Explicabo, est!
             </p>
+            <button type="button" class="btn btn-secondary" data-toggle="popover" title="Título del Popover" data-content="Contenido del Popover">Popover</button>
+
           </div>
         </div>
       </div>
@@ -190,6 +198,8 @@
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Distinctio, blanditiis.
             </p>
+            <button type="button" class="btn btn-secondary" data-toggle="popover" title="Título del Popover" data-content="Contenido del Popover">Popover</button>
+
           </div>
         </div>
       </div>
@@ -207,6 +217,8 @@
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Veritatis, iure.
             </p>
+            <button type="button" class="btn btn-secondary" data-toggle="popover" title="Título del Popover" data-content="Contenido del Popover">Popover</button>
+
           </div>
         </div>
       </div>
@@ -236,5 +248,14 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
   </body>
 </html>
