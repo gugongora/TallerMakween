@@ -1,37 +1,329 @@
-h5{
-    color: brown;
-}
-.textcarrusel{
-    color:rgb(255, 255, 0)
-}
-
-.contacto{
-    padding-top: 5%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-body{
-    margin: 0;
-    background-color: white;
-    min-height: 100vh;
-    display:grid;
-    grid-template-rows: auto 1fr auto;
+h5 {
+  color: brown;
+}
+.textcarrusel {
+  color: rgb(255, 255, 0);
 }
 
-.footer{
-    color: white;
-    background-color: black;
-    padding-left: 10%; 
-    padding-right: 10%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+.contacto {
+  padding-top: 5%;
 }
 
-h1, a, p, h2, h3, h4, label{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body {
+  margin: 0;
+  background-color: white;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .carousel-img {
-    width: 100%; /* Establece el ancho al 100% del contenedor del carrusel */
-    height: 300px; /* Establece una altura fija, puedes ajustarla según tus necesidades */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo su relación de aspecto */
+  width: 100%; /* Establece el ancho al 100% del contenedor del carrusel */
+  height: 300px; /* Establece una altura fija, puedes ajustarla según tus necesidades */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo su relación de aspecto */
+}
+
+.headimagen {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.headimagen img {
+  height: 800px;
+  float: right;
+  width: auto;
+  @media screen and (max-width: 990px) {
+    content: url(img/mantenimiento-r.jpg);
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.headimagen-reparacion {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.headimagen-reparacion img {
+  width: 100%;
+}
+
+.mant-txt {
+  width: 40%;
+}
+
+.mant-txt h2 {
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 250px;
+  margin-left: 100px;
+}
+
+.mant-txt p {
+  font-size: 20px;
+  margin-top: 0px;
+  margin-left: 100px;
+}
+
+.img-revision {
+  height: 600px;
+  float: right;
+  max-width: 100%;
+  @media screen and (max-width: 990px) {
+    height: auto;
+    max-width: 100%;
+    top: 10%;
+  }
+}
+
+.img-reparacion {
+  height: 500px;
+  float: right;
+  max-width: 100%;
+  margin-right: 50px;
+  @media screen and (max-width: 990px) {
+    height: auto;
+    max-width: 100%;
+    top: 10%;
+  }
+}
+
+.titulos-servicios {
+  position: relative;
+  left: 5%;
+}
+
+.parrafos-servicios {
+  position: relative;
+  left: 5%;
+  font-size: 18px;
+  color: rgb(65, 65, 65);
+}
+
+.img-cards-mant {
+  width: 100%;
+  display: block;
+}
+
+.info-container {
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+}
+
+.info-img {
+  max-width: 700px;
+}
+
+.info-img img {
+  width: 700px;
+  height: auto;
+  margin-right: 150px;
+  float: left;
+}
+
+.info-txt {
+  width: 50%;
+}
+
+.info-txt h2 {
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.info-txt p {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.info-container-rep {
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+}
+
+.info-img-rep {
+  max-width: 700px;
+}
+
+.info-img-rep img {
+  width: 700px;
+  height: auto;
+  margin-right: 150px;
+  float: left;
+}
+
+.info-container-rep img {
+  max-width: 650px;
+  height: auto;
+  margin-right: 30px;
+}
+
+.titulo-inferior-1 {
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.titulo-inferior {
+  margin-left: 80px;
+  padding-top: 6%;
+  text-align: center;
+}
+
+.titulo-inferior h2 {
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.titulo-inferior p {
+  font-size: 20px;
+}
+
+.info-container-ref {
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+}
+
+.info-img-ref {
+  max-width: 700px;
+}
+
+.info-img-ref img {
+  width: 700px;
+  height: auto;
+  margin-right: 150px;
+  float: left;
+}
+
+.container-servicios {
+  padding-top: 7%;
+  padding-bottom: 2%;
+}
+
+.home-mantenimiento {
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  background: url(img/mantenimientoo.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-home-mantenimiento {
+  max-width: 60rem;
+}
+
+.contenido-home-mantenimiento h2 {
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 250px;
+  margin-left: 100px;
+}
+
+.contenido-home-mantenimiento p {
+  font-size: 20px;
+  margin-top: 0px;
+  margin-left: 100px;
+}
+
+.home-reparacion {
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  background: url(img/banner-reparacion.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-home-reparacion {
+  max-width: 60rem;
+}
+
+.contenido-home-reparacion h2 {
+  color: aliceblue;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 250px;
+  margin-left: 100px;
+}
+
+.contenido-home-reparacion p {
+  color: aliceblue;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-left: 100px;
+}
+
+.home-refacciones {
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  background: url(img/refacciones-banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-home-refacciones {
+  max-width: 60rem;
+}
+
+.contenido-home-refacciones h2 {
+  color: aliceblue;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 250px;
+  margin-left: 100px;
+}
+
+.contenido-home-refacciones p {
+  color: aliceblue;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-left: 100px;
+}
+
+.titulo-trabajos {
+  color: aliceblue;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.titulo-trabajos-inicio {
+  color: aliceblue;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }

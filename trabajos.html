@@ -18,9 +18,10 @@
   </head>
 
   <body style="background-color: white">
+    <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg" style="background-color: black">
       <div class="container">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand"
           ><img src="img/rollsroyce.png" alt="error" width="30" height="40" />
           <span class="text-light" style="font-size: 10mm">Rayo</span
           ><span class="text-secondary" style="font-size: 10mm"
@@ -65,7 +66,9 @@
               </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="trabajos.html" style="color: aliceblue">Trabajos</a>
+              <a class="nav-link" href="trabajos.html" style="color: aliceblue"
+                >Trabajos</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="equipo.html" style="color: aliceblue"
@@ -82,13 +85,66 @@
                 >CREAR UNA CUENTA/INGRESA</a
               >
             </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                type="button"
+                data-bs-toggle="popover"
+                title="0 productos"
+                data-bs-content="Tu
+                carrito está vacío."
+                style="color: aliceblue"
+                ><i class="bi bi-cart"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-
+    <!--MODAL-->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none">
+            <span class="text-dark"><h3>Servicios</h3></span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <a class="nav-link" href="mantencion.html"
+              ><p style="font-size: 5mm; color: black">Mantenimiento</p></a
+            >
+            <hr />
+            <br />
+            <a class="nav-link" href="reparacion.html"
+              ><p style="font-size: 5mm; color: black">Reparaciones</p></a
+            >
+            <hr />
+            <br />
+            <a class="nav-link" href="refacciones.html"
+              ><p style="font-size: 5mm; color: black">Refacciones</p></a
+            >
+            <hr />
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
     <br /><br /><br />
-    <div><img src="img/toptrabajos.png" alt="error" style="width: 100%;">  </div>
+    <!--HEADER-->
+    <div><img src="img/toptrabajos.png" alt="error" style="width: 100%" /></div>
 
     <div class="container">
       <div class="row">
@@ -100,80 +156,158 @@
         </div>
       </div>
 
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" style="width: 80%; margin:auto">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/trabajo1.1.png" class="d-block w-100" alt="...">
+      <div class="card col-md-10" style="margin: auto">
+        <div class="card-header">Reparación y pintura</div>
+        <div id="carouselExampleFade1" class="carousel slide carousel-fade">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/trabajo1.1.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="titulo-trabajos">ANTES</h1>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/trabajo1.2.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="titulo-trabajos">DESPUES</h1>
+              </div>
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="img/trabajo1.2.png" class="d-block w-100" alt="...">
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade1"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade1"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <br><br>
-
-      <div id="carouselExampleFade2" class="carousel slide carousel-fade" style="width: 80%; margin:auto">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/trabajo2.1.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/trabajo2.2.png" class="d-block w-100" alt="...">
-          </div>
+        <div class="card-body">
+          <p class="card-text">Se realiza un trabajo de restauración.</p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-      <br><br>
+      <br /><br />
 
-      <div id="carouselExampleFade3" class="carousel slide carousel-fade" style="width: 80%; margin:auto">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/trabajo3.1.png" class="d-block w-100" alt="...">
+      <div class="card col-md-10" style="margin: auto">
+        <div class="card-header">Reparación y varios añadidos</div>
+        <div id="carouselExampleFade2" class="carousel slide carousel-fade">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/trabajo2.1.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="titulo-trabajos">ANTES</h1>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/trabajo2.2.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="titulo-trabajos">DESPUES</h1>
+              </div>
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="img/trabajo3.2.png" class="d-block w-100" alt="...">
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade2"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade2"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade3" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade3" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="card-body">
+          <p class="card-text">
+            SCambio total, nuevo diseño y un agregado de luces.
+          </p>
+        </div>
       </div>
-
-     
-    <br><br>
+      <br /><br />
+      <!---->
+      <div class="card col-md-10" style="margin: auto">
+        <div class="card-header">
+          Reparación y cambio de pintura, añadidos extras
+        </div>
+        <div id="carouselExampleFade3" class="carousel slide carousel-fade">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/trabajo3.1.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="titulo-trabajos">ANTES</h1>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/trabajo3.2.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="titulo-trabajos">DESPUES</h1>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade3"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade3"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Restauración y pintado, se agregan elementos.</p>
+        </div>
+      </div>
+    </div>
+    <br /><br />
 
     <footer class="footer">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
             <h3>Contacto</h3>
-            <p>Correo electrónico: info@example.com</p>
-            <p>Teléfono: 123-456-7890</p>
+            <p><i class="bi bi-envelope"></i> soporte@mcqueen.com</p>
+            <p><i class="bi bi-telephone"></i> +56 9 1234 5678</p>
           </div>
           <div class="col-md-6">
             <h3>Redes Sociales</h3>
-            <p>Facebook</p>
-            <p>Instragram</p>
+            <p>
+              <a href="https:www.facebook.com/mcqueen" target="_blank"
+                ><i class="bi bi-facebook" style="color: white"></i
+              ></a>
+              <a href="https://www.instagram.com/mcqueen" target="_blank"
+                ><i class="bi bi-instagram" style="color: white"></i
+              ></a>
+              <a href="https://www.twitter.com/mcqueen" target="_blank"
+                ><i class="bi bi-twitter-x" style="color: white"></i
+              ></a>
+            </p>
           </div>
         </div>
       </div>
@@ -184,5 +318,22 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+    </script>
   </body>
 </html>
