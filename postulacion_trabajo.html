@@ -108,14 +108,14 @@
 
     <!--FORM-->
       <div class="d-flex justify-contetnt-center" style="width: 60%; margin: auto">
-      <form class="row g-3">
+      <form class="row g-3" >
         <div class="col-md-6 ">
           <label for="in_rut" class="form-label">Rut</label>
           <input type="text" class="form-control" id="in_rut">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="inputPassword4" oninput="validarNombre();">
+          <input type="text" class="form-control" id="inputPassword4">
         </div>
         <div class="col-12">
           <label for="inputAddress" class="form-label">Apellido Paterno</label>
@@ -219,13 +219,10 @@
         });
     </script>
     <script>
-        function validateForm() {
-            var v1= document.getElementById("in_rut")
-            if (v1 == "") {
-              alert("Name must be filled out");
-              return false;
-            }
-          }
+      function validateForm(){
+        
+
+      }
     </script>
 </body>
 </html> 
