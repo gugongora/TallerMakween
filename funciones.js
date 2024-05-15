@@ -68,8 +68,6 @@ function validarNombre(tipo) {
     }
   }
 
-  var boton;
-  boton = document.getElementById("botonFormulario");
 
   if (nombre.length >= 3 && nombre.length <= 20) {
     
@@ -149,11 +147,41 @@ function validarRUT()
 
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener el botón "Carta" por su clase
+  var botonCarta = document.querySelector("button[data-bs-target='#exampleModalToggle']");
 
-function generarCarta()
-{
-  if(validarFormulario())
-  {
-    
-  }
-}
+  // Agregar un evento de escucha para el evento "click" del botón "Carta"
+  botonCarta.addEventListener("click", function() {
+
+    if (validarFormulario()) {
+        // Obtener los valores de los campos del formulario
+        var nombre = document.getElementById("inputNombre").value;
+        var paterno = document.getElementById("inputPaterno").value;
+        var materno = document.getElementById("inputMaterno").value;
+        var email = document.getElementById("inputEmail").value;
+        var celular = document.getElementById("inputCelular").value;
+        var fecha_nacimiento_str = document.getElementById("inputNacimiento").value;
+        var rut = document.getElementById("inputRut").value;
+        var genero = document.getElementById("inputSexo").value;
+
+        // Concatenar los valores y asignarlos al textarea
+        var textareaCarta = document.getElementById("carta");
+        textareaCarta.value = "Nombre: " + nombre + "\n" +
+                              "Apellido Paterno: " + paterno + "\n" +
+                              "Apellido Materno: " + materno + "\n\n" +
+
+                              "Fecha de Nacimiento: " + fecha_nacimiento_str + "\n" +
+                              "RUT: " + rut + "\n\n" +
+
+                              "Género: " + genero + "\n" +
+                              "Email: " + email + "\n" +
+                              "Celular: " + celular
+                              
+    } else {
+        // Mostrar un mensaje de error si el formulario está incompleto
+        var textareaCarta = document.getElementById("carta");
+        textareaCarta.value = "El formulario está incompleto.";
+    }
+  });
+});

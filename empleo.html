@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,18 +15,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="funciones.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="navbar_footer.js"></script>
   </head>
-
   <body style="background-color: white">
     <div id="navbar"></div>
 
-
     <!--CARDS-->
     <div class="container" style="padding-top: 5%; padding-bottom: 5%">
-      
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Solicitud de Empleo</h4>
@@ -41,7 +36,7 @@
             </div>
 
             <div class="col-md-4">
-              <label for="inputApellido" class="form-label"
+              <label for="inputPaterno" class="form-label"
                 >Apellido Paterno</label
               >
               <input
@@ -53,7 +48,7 @@
             </div>
 
             <div class="col-md-4">
-              <label for="inputApellido" class="form-label"
+              <label for="inputMaterno" class="form-label"
                 >Apellido Materno</label
               >
               <input
@@ -93,7 +88,7 @@
             </div>
 
             <div class="col-md-4">
-              <label for="inputEmail4" class="form-label"
+              <label for="inputNacimiento" class="form-label"
                 >Fecha nacimiento</label
               >
               <input
@@ -121,7 +116,7 @@
               <label for="inputProfesion" class="form-label">Profesión</label>
               <input type="text" class="form-control" aria-label="" />
             </div>
- 
+
             <div class="col-md-12 mb-3">
               <label for="inputMotivacion" class="form-label">Motivación</label>
               <textarea
@@ -132,25 +127,60 @@
             </div>
 
             <div class="col-md-12">
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  id="botonFormulario"
-                  onclick="validarFormulario();"
-                >
-                  Enviar
-                </button>
-            </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="botonFormulario"
+                onclick="validarFormulario();"
+              >
+                Enviar
+              </button>
 
-        
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+              >
+                Carta
+              </button>
             </div>
           </form>
         </div>
-
+      </div>
     </div>
     <!--FIN CARDS-->
 
+    <div
+      class="modal fade"
+      id="exampleModalToggle"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Carta</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <textarea id="carta" class="form-control" rows="10"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="footer"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="navbar_footer.js"></script>
+    <script src="funciones.js"></script>
     <script src="mapaclima.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script
@@ -158,7 +188,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
     <script>
       var popoverTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -169,4 +198,3 @@
     </script>
   </body>
 </html>
-
