@@ -175,3 +175,8 @@ body {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
+
+#map {
+  width: 100%;
+  height: 100%; /* Ajusta según las necesidades de diseño */
+}
