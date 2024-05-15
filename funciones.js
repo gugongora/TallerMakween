@@ -1,47 +1,34 @@
-function validarRut() {}
-
-function validarFormulario()
-{
-  /*if(validarEmail())
-  {
-    console.log("correo bien");
+function validarFormulario() {
+  function mostrarAlerta(tipo, mensaje) {
+    const alertaDiv = document.getElementById("alerta");
+    alertaDiv.classList.remove("alert-success", "alert-danger"); // Limpiar clases anteriores
+    alertaDiv.classList.add("alert-" + tipo);
+    alertaDiv.innerHTML = `
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        ${mensaje}
+    `;
+    alertaDiv.style.display = "block";
   }
 
-  if(validarRUT())
-  {
-    console.log("rut bien");
-  }
-
-  if(validarEdad())
-  {
-    console.log("edad bien");
-  }
-  if(validarNombre(1))
-  {
-    console.log("nombre bien");
-  }
-  if(validarCelular())
-  {
-    console.log("celular bien");
-  }
-  if(validarSexo())
-  {
-    console.log("sexo bien");
-  }*/
-
-  if(validarEmail() && validarRUT() && validarEdad && validarNombre(1) && validarNombre(2) && validarNombre(3) && validarCelular() && validarSexo())
-  {
-    console.log("todo correcto");
+  if (
+    validarEmail() &&
+    validarRUT() &&
+    validarEdad &&
+    validarNombre(1) &&
+    validarNombre(2) &&
+    validarNombre(3) &&
+    validarCelular() &&
+    validarSexo()
+  ) {
+    mostrarAlerta("success", "¡Todo correcto!");
     return true;
-  }
-  else{
-    console.log("hay error en el formulario");  
+  } else {
+    mostrarAlerta("danger", "¡Hay errores en el formulario!");
     return false;
   }
 }
 
-function validarEmail()
-{
+function validarEmail() {
   var email = document.getElementById("inputEmail").value;
 
   var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -50,7 +37,6 @@ function validarEmail()
 }
 
 function validarNombre(tipo) {
-
   var nombre;
 
   switch (tipo) {
@@ -68,18 +54,17 @@ function validarNombre(tipo) {
     }
   }
 
+  var boton;
+  boton = document.getElementById("botonFormulario");
 
   if (nombre.length >= 3 && nombre.length <= 20) {
-    
     return true;
-  }
-  else{
-    return false;;
+  } else {
+    return false;
   }
 }
 
 function validarEdad() {
-
   var fecha_nacimiento;
   var fecha_actual = new Date();
   fecha_nacimiento_str = document.getElementById("inputNacimiento").value;
@@ -88,100 +73,101 @@ function validarEdad() {
   var edad = Math.floor(diferencia / (1000 * 60 * 60 * 24 * 365));
   console.log("La edad es: " + edad);
 
-
-  if(edad >= 18 && edad <= 35)
-  {
+  if (edad >= 18 && edad <= 35) {
     return true;
-  }
-  else{
+  } else {
     return false;
   }
-
 }
 
 function validarCelular() {
-
   var celular = document.getElementById("inputCelular").value;
 
-  if(celular >= 100000000 && celular <= 999999999)
-  {
+  if (celular >= 100000000 && celular <= 999999999) {
     return true;
-  }
-  else{
+  } else {
     return false;
   }
-
 }
 
-function validarSexo()
-{
-
+function validarSexo() {
   var genero = document.getElementById("inputSexo").value;
 
-
-  if(genero == "Hombre" || genero == "Mujer")
-  {
+  if (genero == "Hombre" || genero == "Mujer") {
     return true;
-  }
-  else{
+  } else {
     return false;
   }
 }
 
-function validarRUT()
-{
-
+function validarRUT() {
   var rut = document.getElementById("inputRut").value;
 
-  var guion = rut.charAt(rut.length-2);
-  var dv = rut.charAt(rut.length-1);
+  var guion = rut.charAt(rut.length - 2);
+  var dv = rut.charAt(rut.length - 1);
 
-  if(guion == '-' && /^[0-9K]$/.test(dv) && (rut.length >= 9 && rut.length <= 10))
-  {
+  if (
+    guion == "-" &&
+    /^[0-9K]$/.test(dv) &&
+    rut.length >= 9 &&
+    rut.length <= 10
+  ) {
     return true;
-  }
-  else{
+  } else {
     return false;
   }
-
-
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Obtener el botón "Carta" por su clase
-  var botonCarta = document.querySelector("button[data-bs-target='#exampleModalToggle']");
+  var botonCarta = document.querySelector(
+    "button[data-bs-target='#exampleModalToggle']"
+  );
 
   // Agregar un evento de escucha para el evento "click" del botón "Carta"
-  botonCarta.addEventListener("click", function() {
-
+  botonCarta.addEventListener("click", function () {
     if (validarFormulario()) {
-        // Obtener los valores de los campos del formulario
-        var nombre = document.getElementById("inputNombre").value;
-        var paterno = document.getElementById("inputPaterno").value;
-        var materno = document.getElementById("inputMaterno").value;
-        var email = document.getElementById("inputEmail").value;
-        var celular = document.getElementById("inputCelular").value;
-        var fecha_nacimiento_str = document.getElementById("inputNacimiento").value;
-        var rut = document.getElementById("inputRut").value;
-        var genero = document.getElementById("inputSexo").value;
+      // Obtener los valores de los campos del formulario
+      var nombre = document.getElementById("inputNombre").value;
+      var paterno = document.getElementById("inputPaterno").value;
+      var materno = document.getElementById("inputMaterno").value;
+      var email = document.getElementById("inputEmail").value;
+      var celular = document.getElementById("inputCelular").value;
+      var fecha_nacimiento_str =
+        document.getElementById("inputNacimiento").value;
+      var rut = document.getElementById("inputRut").value;
+      var genero = document.getElementById("inputSexo").value;
 
-        // Concatenar los valores y asignarlos al textarea
-        var textareaCarta = document.getElementById("carta");
-        textareaCarta.value = "Nombre: " + nombre + "\n" +
-                              "Apellido Paterno: " + paterno + "\n" +
-                              "Apellido Materno: " + materno + "\n\n" +
-
-                              "Fecha de Nacimiento: " + fecha_nacimiento_str + "\n" +
-                              "RUT: " + rut + "\n\n" +
-
-                              "Género: " + genero + "\n" +
-                              "Email: " + email + "\n" +
-                              "Celular: " + celular
-                              
+      // Concatenar los valores y asignarlos al textarea
+      var textareaCarta = document.getElementById("carta");
+      textareaCarta.value =
+        "Nombre: " +
+        nombre +
+        "\n" +
+        "Apellido Paterno: " +
+        paterno +
+        "\n" +
+        "Apellido Materno: " +
+        materno +
+        "\n\n" +
+        "Fecha de Nacimiento: " +
+        fecha_nacimiento_str +
+        "\n" +
+        "RUT: " +
+        rut +
+        "\n\n" +
+        "Género: " +
+        genero +
+        "\n" +
+        "Email: " +
+        email +
+        "\n" +
+        "Celular: " +
+        celular;
     } else {
-        // Mostrar un mensaje de error si el formulario está incompleto
-        var textareaCarta = document.getElementById("carta");
-        textareaCarta.value = "El formulario está incompleto.";
+      // Mostrar un mensaje de error si el formulario está incompleto
+      var textareaCarta = document.getElementById("carta");
+      textareaCarta.value = "El formulario está incompleto.";
     }
   });
 });
