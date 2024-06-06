@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var map = L.map('map').setView([-33.02278421519157, -71.56742023631399], 11); // Centro del mapa en Madrid, España
+    var map = L.map('map').setView([-33.02278421519157, -71.56742023631399], 11); 
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    var apiKey = 'abb46a7e960f949ba57279dfe3ac84af'; // Reemplaza esto con tu clave API real
-    var cities = ['Valparaíso', 'Santiago', 'Viña del Mar']; // Ejemplo de ciudades
+    var apiKey = 'abb46a7e960f949ba57279dfe3ac84af'; 
+    var cities = ['Valparaíso', 'Santiago', 'Viña del Mar']; 
 
     cities.forEach(function(city) {
         var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
